@@ -124,9 +124,21 @@ p {
 #customerName, #menuSelect, #reserveDate {
   max-width: 90%;
 }
+.demo-notice {
+  background-color: #fff0f5;
+  color: #b03060;
+  border: 2px solid #f5b6c8;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 15px auto;
+  max-width: 90%;
+  font-size: 14px;
+  font-weight: bold;
+}
 </style>
 </head>
 <body>
+    <p class="demo-notice">※このサイトはWeb制作学習用の架空の美容室です。実在する店舗ではなく、予約もできません。</p>
     <h1>いちご美容室</h1>
     <img src="salon.png" alt="美容室の写真">
     <p class="catch">あなたの毎日に、ちょっとした特別を。</p>
@@ -212,6 +224,7 @@ if (new Date(date + "T00:00:00") < today) {
   document.getElementById("message").textContent =
     "過去の日付は予約できません！";
   return;
+
 }
 let reserveDay = new Date(date + "T00:00:00").getDay();
 
